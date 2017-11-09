@@ -1,0 +1,15 @@
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+.btn_inicial_phc {
+	background-color: #999;
+}
+
+.avartar_ini img {
+	border-radius: 200px;
+	border: solid 2px #545677;
+}
+
+ion-view,.pane,.view {
+	background-color: #F5F8FC;
+}
+
