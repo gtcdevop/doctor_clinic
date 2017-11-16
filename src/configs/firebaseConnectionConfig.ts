@@ -8,3 +8,17 @@ let firebaseConnection = {
 };
 
 
+
+
+/**
+ *  Regras originais do banco de dados
+ 
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+
+  Regras atuais do banco de dados
+}
+ */
