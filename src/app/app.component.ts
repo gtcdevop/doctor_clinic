@@ -34,7 +34,7 @@ export class MyApp {
               public splashScreen: SplashScreen,
               private _authProvider : AutenticacaoProvider) {
     this.initializeApp();
-    _authProvider.carreguei();
+    this._authProvider.carreguei();
 
     // used for an example of ngFor and navigation
     this.pages = [

@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 
-/*
-  Generated class for the PassaOuRepassaProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
+/**
+ * Para instalaar angular fire
+ * npm install -g @angular/cli
+ * npm install angularfire2 firebase promise-polyfill --save
+ * 
+ * Depois seguir esse tutorial para configurar o banco de dados
+ * https://github.com/angular/angularfire2/blob/master/docs/ionic/v3.md#setup-ngmodule
+ */
 @Injectable()
 export class PassaOuRepassaProvider {
 
@@ -20,6 +22,14 @@ export class PassaOuRepassaProvider {
    */
   perguntasParaPagina(pagina: string): any {
     //
+  }
+
+/**
+ * Pega uma pergunta aleatoria testa acesso ao banco de dados 
+ */
+  pegaPerguntaAleatoria():void { 
+
+
   }
 }
 

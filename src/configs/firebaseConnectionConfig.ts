@@ -1,4 +1,4 @@
-let firebaseConnection = {
+export const firebaseConnection = {
     apiKey: "AIzaSyB5Uu4A3HimQEvazk_H6EeMZPqZWQsjjJQ",
     authDomain: "medico-fa9ad.firebaseapp.com",
     databaseURL: "https://medico-fa9ad.firebaseio.com",

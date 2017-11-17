@@ -13,11 +13,23 @@ import {LogoutPage} from '../pages/loginsFactory/logout/logout';
 // Paginas das perguntas
 import {DepressaoPage} from '../pages/perguntasFactory/depressao/depressao';
 
-
+/// Paginas do Ionic
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+
+//Providers and Singletons, Backend
 import { AutenticacaoProvider } from '../providers/autenticacao/autenticacao';
 import { PassaOuRepassaProvider } from '../providers/passa-ou-repassa/passa-ou-repassa';
+
+//Configurações Diversas
+import { firebaseConnection } from '../configs/firebaseConnectionConfig';
+
+//Banco de dados
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +43,8 @@ import { PassaOuRepassaProvider } from '../providers/passa-ou-repassa/passa-ou-r
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    //Banco de dados ( falta virgula no final )
+    AngularFireModule.initializeApp(firebaseConnection), AngularFireDatabaseModule, AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,6 +59,9 @@ import { PassaOuRepassaProvider } from '../providers/passa-ou-repassa/passa-ou-r
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    //Banco de dados
+    AngularFireDatabase,
+    // Backend
     AutenticacaoProvider,
     PassaOuRepassaProvider
   ]
