@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AutenticacaoProvider } from '../../providers/autenticacao/autenticacao';
 //pages
+import { EmailSignPage } from '../loginsFactory/email-sign/email-sign'
 
 @Component({
   selector: 'page-home',
@@ -24,7 +25,7 @@ export class HomePage {
     this.auth.emailLogin();
   }
   SignEmail():void {
-    this.navCtrl.push()
+    this.navCtrl.push(EmailSignPage)
   }
   
 }

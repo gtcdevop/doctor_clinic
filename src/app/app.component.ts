@@ -34,8 +34,10 @@ export class MyApp {
               public splashScreen: SplashScreen,
               private _authProvider : AutenticacaoProvider) {
     this.initializeApp();
-    this._authProvider.carreguei();
-
+                // Verifica se usuario esta logado -> funcao assincrona
+    this._authProvider.authState.subscribe((user) => {
+        console.log(user)
+    });
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },

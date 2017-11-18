@@ -22,4 +22,11 @@ export class EmailSignPage {
     console.log('ionViewDidLoad EmailSignPage');
   }
 
+  novoUsuario(): void {
+
+  }
+
+  cancelar(): void {
+    this.navCtrl.pop();
+  }
 }

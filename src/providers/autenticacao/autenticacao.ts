@@ -5,6 +5,13 @@ import { Observable } from "rxjs/Observable";
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
+//Login no browser 
+// Instalar
+/**
+ * ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="547741515572804" --variable APP_NAME="medico"
+ */
+// import { Facebook } from '@ionic-native/facebook';
+
 /*
   Generated class for the AutenticacaoProvider provider.
 
@@ -14,34 +21,25 @@ import * as firebase from 'firebase/app';
 @Injectable()
 export class AutenticacaoProvider {
 
-
+  public authState: any;
   name: string;
+  public currentUser: firebase.User = null;
 
   constructor(private af: AngularFireModule,
               private afAuth: AngularFireAuth,
               private platform: Platform) {
-    console.log('Hello AutenticacaoProvider Provider');
+    afAuth.authState.subscribe((user: firebase.User) => this.currentUser = user);
+    this.authState = afAuth.authState;
   }
 
 
   facebookLogin():void {
-    return Observable.create(observer => {
-      if (this.platform.is('cordova')) {
-        return this.facebook.login(['email']).then(res => {
-          const facebookCredential = auth.FacebookAuthProvider.credential(res.authResponse.accessToken);
-          this.firebase.auth().signInWithCredential(facebookCredential).then(()=>{
-            this.authenticated = true;
-            observer.next();
-          }).catch(error => {
-            //console.log(error);
-            observer.error(error);
-          });
-        });
-      } else {
+    alert(JSON.stringify(this.currentUser));
+      if(this.currentUser == null){ 
         this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
-        
+      } else {
+        alert("usuario ja logado");
       }
-    });
   }
 
   pegaUsuarioLogado(): any {
@@ -55,10 +53,14 @@ export class AutenticacaoProvider {
   }
 
   googleLogin(): void {
-    console.log("Google Login");
-    
+    return Observable.create(observer => {
+      if (this.platform.is('cordova')) {      
+        return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      } else {
+          alert("Google login não é suportado");
+      }
+    });
   }
-
   emailLogin(): void {
     console.log("Email login");
   }
