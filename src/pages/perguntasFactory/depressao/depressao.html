@@ -7,12 +7,71 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>depressao</ion-title>
+    <ion-title>
+      <button round ion-button  > 
+          <ion-icon name="menu">
+
+          </ion-icon>
+          depressao </button>
+    </ion-title>
+
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <h1>Acesso Rápido</h1>
 
+  
+  <ion-list>
+    <ion-item text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      <h4>Principais drogas, doses e observações
+        <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+      </h4>
+    </ion-item>
+    <ion-item>
+      <div *ngIf="isGroupShown(i)">
+            <ion-row> <!-- header da tabela -->
+              <ion-col>
+                Coluna 1
+              </ion-col>
+              <ion-col>
+                Coluna 1
+              </ion-col>
+              <ion-col>
+                Coluna 1
+              </ion-col>
+              <div class="moreInfo">
+                &nbsp;
+              </div>
+            </ion-row> <!-- fecha header da tabela -->
+            
+            <ion-row> <!-- Coluna completa -->
+              <ion-col>
+                Inibidores Seletivos da Recaptação da Serotonina
+              </ion-col>
+            </ion-row>  <!-- Fecha coluna completa -->
+           
+           
+            <ion-row>  <!-- Compostos -->
+                <ion-col>
+                  composto 1
+                </ion-col>
+                <ion-col>
+                  dosagem
+                </ion-col>
+                <ion-col>
+                  dose habitual
+                </ion-col>
+                  <div class="moreInfo">
+                    <ion-icon (click)="showToastMessage(this)"  name="book"></ion-icon>
+                  </div>
+              </ion-row><!-- Fecha compostos -->
+        </div>
+    </ion-item>
+  </ion-list>
+
+  
+    
 </ion-content>
