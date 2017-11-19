@@ -12,6 +12,15 @@ import {LogoutPage} from '../pages/loginsFactory/logout/logout';
 
 // Paginas das perguntas
 import {DepressaoPage} from '../pages/perguntasFactory/depressao/depressao';
+import {AnsiedadePage} from '../pages/perguntasFactory/ansiedade/ansiedade';
+import {CaquexiaPage} from '../pages/perguntasFactory/caquexia/caquexia';
+import {ConstipacaoIntestinalPage} from '../pages/perguntasFactory/constipacao-intestinal/constipacao-intestinal';
+import {DeliriumPage} from '../pages/perguntasFactory/delirium/delirium';
+import {DispineiaPage} from '../pages/perguntasFactory/dispineia/dispineia';
+import {DorNnPage} from '../pages/perguntasFactory/dor-nn/dor-nn';
+import {NauseaEvomitoPage } from '../pages/perguntasFactory/nausea-evomito/nausea-evomito';
+import {ObstrucaoIntestinalPage } from '../pages/perguntasFactory/obstrucao-intestinal/obstrucao-intestinal';
+
 
 /// Paginas do Ionic
 import { StatusBar } from '@ionic-native/status-bar';
@@ -37,7 +46,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     // Paginas do login
     BemVindoPage, EmailLoginPage, EmailSignPage, LogoutPage,
     // Paginas das perguntas
-    DepressaoPage,
+    DepressaoPage,AnsiedadePage,CaquexiaPage,ConstipacaoIntestinalPage,DeliriumPage,DispineiaPage,DorNnPage,NauseaEvomitoPage,ObstrucaoIntestinalPage,
     HomePage
   ],
   imports: [
@@ -53,7 +62,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
      // Paginas do login
      BemVindoPage, EmailLoginPage, EmailSignPage, LogoutPage,
      // Paginas das perguntas
-     DepressaoPage
+     DepressaoPage,AnsiedadePage,CaquexiaPage,ConstipacaoIntestinalPage,DeliriumPage,DispineiaPage,DorNnPage,NauseaEvomitoPage,ObstrucaoIntestinalPage
   ],
   providers: [
     StatusBar,
