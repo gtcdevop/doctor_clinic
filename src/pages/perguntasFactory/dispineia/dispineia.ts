@@ -15,11 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DispineiaPage {
 
+  intensidadeDor:any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DispineiaPage');
+  showDiagnostico(intensidadeDor) : void {
+    console.log(intensidadeDor)
+    console.log("show diagnostico");
   }
+
+  
 
 }

@@ -23,6 +23,16 @@
 <ion-content padding>
   <h1>Acesso Rápido</h1>
 
+  <ion-list>
+    <ion-item *ngFor="let d of diseases; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+      <h3>
+        {{d.title}}
+        <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+      </h3>
+      <div *ngIf="isGroupShown(i)">{{d.description}}</div>
+    </ion-item>
+  </ion-list>
+    
   
   <ion-list>
     <ion-item text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
@@ -70,6 +80,7 @@
               </ion-row><!-- Fecha compostos -->
         </div>
     </ion-item>
+
   </ion-list>
 
   

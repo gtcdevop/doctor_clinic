@@ -12,6 +12,15 @@ import {EmailSignPage} from '../pages/loginsFactory/email-sign/email-sign';
 import {LogoutPage} from '../pages/loginsFactory/logout/logout';
 //#####Paginas das perguntas
 import {DepressaoPage} from '../pages/perguntasFactory/depressao/depressao';
+import {AnsiedadePage} from '../pages/perguntasFactory/ansiedade/ansiedade';
+import {CaquexiaPage} from '../pages/perguntasFactory/caquexia/caquexia';
+import {ConstipacaoIntestinalPage} from '../pages/perguntasFactory/constipacao-intestinal/constipacao-intestinal';
+import {DeliriumPage} from '../pages/perguntasFactory/delirium/delirium';
+import {DispineiaPage} from '../pages/perguntasFactory/dispineia/dispineia';
+import {DorNnPage} from '../pages/perguntasFactory/dor-nn/dor-nn';
+import {NauseaEvomitoPage } from '../pages/perguntasFactory/nausea-evomito/nausea-evomito';
+import {ObstrucaoIntestinalPage } from '../pages/perguntasFactory/obstrucao-intestinal/obstrucao-intestinal';
+
 
 
 // Provider de autenticacao usado para verificar se user esta logado e assim mostrar ou nao menu
@@ -44,8 +53,16 @@ export class MyApp {
       { title: 'Email Login', component: EmailLoginPage },
       { title: 'Logout', component: LogoutPage },
       { title: 'Email Sign', component: EmailSignPage },
+      { title: 'Bem Vindo', component: BemVindoPage },
       { title: 'Depressao', component: DepressaoPage },
-      { title: 'Bem Vindo', component: BemVindoPage }
+      { title: 'AnsiedadePage', component: AnsiedadePage },
+      { title: 'ConstipacaoIntestinalPage', component: ConstipacaoIntestinalPage },
+      { title: 'DeliriumPage', component: DeliriumPage },
+      { title: 'CaquexiaPage', component: CaquexiaPage },
+      { title: 'DispineiaPage', component: DispineiaPage },
+      { title: 'DorNnPage', component: DorNnPage },
+      { title: 'NauseaEvomitoPage', component: NauseaEvomitoPage },
+      { title: 'ObstrucaoIntestinalPage', component: ObstrucaoIntestinalPage },
     ];
 
   }

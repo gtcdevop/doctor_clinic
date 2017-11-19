@@ -7,12 +7,29 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>dispineia</ion-title>
+    <ion-title>
+        <button round ion-button  > dispineia </button>
+      </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-list>
+    <ion-item>
+        <h3>Intensidade de dor</h3>
+        <ion-range min="1" max="3"  (ionChange)="showDiagnostico(intensidadeDor)"  [(ngModel)]="intensidadeDor" color="secondary">
+          <ion-label range-left>Pouca</ion-label>
+          <ion-label range-right>Muita</ion-label>
+        </ion-range>
+      </ion-item>
+  </ion-list>
+
+  <div >
+
+  </div>
+
 
 </ion-content>
