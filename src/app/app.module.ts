@@ -17,6 +17,9 @@ import {CaquexiaPage} from '../pages/perguntasFactory/caquexia/caquexia';
 import {ConstipacaoIntestinalPage} from '../pages/perguntasFactory/constipacao-intestinal/constipacao-intestinal';
 import {DeliriumPage} from '../pages/perguntasFactory/delirium/delirium';
 import {DispineiaPage} from '../pages/perguntasFactory/dispineia/dispineia';
+import {FortePage} from '../pages/perguntasFactory/dispineia/forte/forte';
+import {FracaPage} from '../pages/perguntasFactory/dispineia/fraca/fraca';
+import {ModeradaPage} from '../pages/perguntasFactory/dispineia/moderada/moderada';
 import {DorNnPage} from '../pages/perguntasFactory/dor-nn/dor-nn';
 import {NauseaEvomitoPage } from '../pages/perguntasFactory/nausea-evomito/nausea-evomito';
 import {ObstrucaoIntestinalPage } from '../pages/perguntasFactory/obstrucao-intestinal/obstrucao-intestinal';
@@ -46,6 +49,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     // Paginas do login
     BemVindoPage, EmailLoginPage, EmailSignPage, LogoutPage,
     // Paginas das perguntas
+    FortePage,FracaPage,ModeradaPage,    
     DepressaoPage,AnsiedadePage,CaquexiaPage,ConstipacaoIntestinalPage,DeliriumPage,DispineiaPage,DorNnPage,NauseaEvomitoPage,ObstrucaoIntestinalPage,
     HomePage
   ],
@@ -62,6 +66,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
      // Paginas do login
      BemVindoPage, EmailLoginPage, EmailSignPage, LogoutPage,
      // Paginas das perguntas
+     FortePage,FracaPage,ModeradaPage,     
      DepressaoPage,AnsiedadePage,CaquexiaPage,ConstipacaoIntestinalPage,DeliriumPage,DispineiaPage,DorNnPage,NauseaEvomitoPage,ObstrucaoIntestinalPage
   ],
   providers: [

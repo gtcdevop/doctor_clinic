@@ -22,7 +22,6 @@ import {NauseaEvomitoPage } from '../pages/perguntasFactory/nausea-evomito/nause
 import {ObstrucaoIntestinalPage } from '../pages/perguntasFactory/obstrucao-intestinal/obstrucao-intestinal';
 
 
-
 // Provider de autenticacao usado para verificar se user esta logado e assim mostrar ou nao menu
 import { AutenticacaoProvider } from '../providers/autenticacao/autenticacao';
 

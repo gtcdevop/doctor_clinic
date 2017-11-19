@@ -20,10 +20,13 @@
   <ion-list>
     <ion-item>
         <h3>Intensidade de dor</h3>
-        <ion-range min="1" max="3"  (ionChange)="showDiagnostico(intensidadeDor)"  [(ngModel)]="intensidadeDor" color="secondary">
+        <ion-range min="1" max="3" (ionChange)="diagnostico(intensidadeDor)"  [(ngModel)]="intensidadeDor" color="secondary">
           <ion-label range-left>Pouca</ion-label>
           <ion-label range-right>Muita</ion-label>
         </ion-range>
+      </ion-item>
+      <ion-item>
+        <ion-button round (click)="showPagina()">SELECIONA</ion-button>
       </ion-item>
   </ion-list>
 
